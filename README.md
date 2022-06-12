@@ -177,7 +177,7 @@ chown -R frappe:frappe sites
 Download mariadb backup from asw s3 
 
 ```
-curl https://files-for-excel-bd.s3.ap-southeast-1.amazonaws.com/20220607_060005-erp_excelbd_com-database.sql.gz
+wget https://files-for-excel-bd.s3.ap-southeast-1.amazonaws.com/20220607_060005-erp_excelbd_com-database.sql.gz
 ```
 
 It will take some time to Complete download successfully
