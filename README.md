@@ -177,7 +177,8 @@ chown -R frappe:frappe sites
 Download mariadb backup from asw s3 
 
 ```
-wget https://files-for-excel-bd.s3.ap-southeast-1.amazonaws.com/20220607_060005-erp_excelbd_com-database.sql.gz
+wget https://files-for-excel-bd.s3.ap-southeast-1.amazonaws.com/20220612_060135/20220612_060135-testerp_excelbd_com-database.sql.gz
+
 ```
 
 It will take some time to Complete download successfully
@@ -210,7 +211,7 @@ Setup AWS CLI on local Windows CMD and copy the S3 bucket URL for MongoDB backup
 This will generate a Public URL for the backup file. Now, from MongoDB terminal, run
 
 ```
-curl "public_mongodb_database_backup_url" --output dump.tar.gz
+curl https://files-for-excel-bd.s3.ap-southeast-1.amazonaws.com/20220612000013.tar.gz --output dump.tar.gz
 tar xvfz dump.tar.gz
 rm -fr /dump/admin
 mongorestore -u root -p $MONGODB_ROOT_PASSWORD --authenticationDatabase admin dump
