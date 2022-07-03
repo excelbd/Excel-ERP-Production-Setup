@@ -224,7 +224,7 @@ Go to ERPNext oAuth Client list, Social Login Key list and change everything to 
 
 ```
 mongo -u root -p $MONGODB_ROOT_PASSWORD --authenticationDatabase admin
-show databases;
+show dbs;
 use rma-server;
 db.server_settings.findOne()
 ```
