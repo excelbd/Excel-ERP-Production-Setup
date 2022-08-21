@@ -202,7 +202,7 @@ Go to MongoDB container terminal and run.
 ```
 cd /opt
 mkdir restore
-cd /restore
+cd ./restore
 ```
 Setup AWS CLI on local Windows CMD and copy the S3 bucket URL for MongoDB backup file and run
 
