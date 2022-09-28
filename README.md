@@ -89,6 +89,39 @@ Add the yaml configuration from [ frappe bench v12 yaml](https://github.com/exce
 * SITES= `` `erp.excelbd.com` `` **{Note: Don't forgot to add `` }**
 
 
+**Now you can see some of container are `ready` `asigned` and `restarting`**
+
+**Let's Solve this first**
+
+* Go to python container console & connect with `root`
+
+![image](https://user-images.githubusercontent.com/92359442/185776847-90d52297-2ce1-4c24-847a-c16aad73251a.png)
+
+* After Connect with root you will be redirect to this path `root@49290287e8dd:/home/frappe/frappe-bench/sites#`
+
+* Now Run this command one by one
+
+```
+apt update
+apt install sudo
+apt install nano
+```
+
+* Create a new file `common_site_config.json` with this name 
+* `nano common_site_config.json`
+* Past this on `common_site_config.json` file
+```
+{
+  "db_host": "mariadb_db",
+  "redis_cache": "redis://redis-cache:6379",
+  "redis_queue": "redis://redis-queue:6379",
+  "redis_socketio": "redis://redis-socketio:6379"
+}
+```
+* Then save and exit from console
+
+**Yeah! Can you see? All container are now running fine. Let's move forward**
+
 # ERPNext Install
 
 Once all stacks are running then go to python container console with `root`
