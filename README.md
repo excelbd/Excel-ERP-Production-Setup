@@ -107,15 +107,29 @@ apt install sudo
 apt install nano
 ```
 
+* Create a new file `apps.txt` with this name
+* `nano apps.txt`
+* Past this on `apps.txt`
+```
+frappe
+excel_erpnext
+erpnext
+```
+
+
 * Create a new file `common_site_config.json` with this name 
 * `nano common_site_config.json`
 * Past this on `common_site_config.json` file
 ```
 {
-  "db_host": "mariadb_db",
-  "redis_cache": "redis://redis-cache:6379",
-  "redis_queue": "redis://redis-queue:6379",
-  "redis_socketio": "redis://redis-socketio:6379"
+ "db_host": "frappe-mariadb_mariadb-master",
+ "db_port": 3306,
+ "maintenance_mode": 0,
+ "pause_scheduler": 1,
+ "redis_cache": "redis://redis-cache:6379",
+ "redis_queue": "redis://redis-queue:6379",
+ "redis_socketio": "redis://redis-socketio:6379",
+ "socketio_port": 9000
 }
 ```
 * Then save and exit from console
